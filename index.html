@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Fast, affordable portfolio for freelancers and students. Resume, links, contact." />
+  <style>
+    :root{--accent:#0ea5a4;--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; background:linear-gradient(180deg,#071020 0%, #071426 60%);color:#e6eef6}
+    .container{max-width:980px;margin:32px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .avatar{width:72px;height:72px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021;box-shadow:0 6px 18px rgba(0,0,0,.6)}
+    h1{margin:0;font-size:26px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    nav a{color:var(--muted);text-decoration:none;margin-left:12px}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;margin-top:28px}
+    .card{background:rgba(255,255,255,0.02);padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,.6)}
+    .services{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+    .service{padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))}
+    .price{font-weight:700;color:var(--accent)}
+
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:16px}
+    .project{padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.015),transparent)}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#022; text-decoration:none;font-weight:700}
+
+    footer{margin-top:28px;color:var(--muted);font-size:14px}
+    @media (max-width:880px){.hero{grid-template-columns:1fr}.brand{gap:10px}.avatar{width:56px;height:56px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar" id="avatarText">YN</div>
+        <div>
+          <h1 id="yourName">Your Name</h1>
+          <p class="lead" id="tagline">I build resumes, portfolios & deliver fast freelance work (1–24 hr turnaround)</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#projects">Samples</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <section>
+        <div class="card">
+          <h2>About</h2>
+          <p id="about">Fast, reliable freelancer. I use AI tools to deliver high-quality resumes, websites and assignment help — quickly. Perfect if you need something done today.</p>
+
+          <div style="margin-top:12px">
+            <h3 id="skillsTitle">Services & Pricing</h3>
+            <div class="services" id="services">
+              <div class="service">
+                <div>Resume rewrite</div>
+                <div class="price">$30</div>
+                <div style="color:var(--muted);font-size:13px">1-hour express • ATS friendly</div>
+              </div>
+              <div class="service">
+                <div>Resume + LinkedIn</div>
+                <div class="price">$50</div>
+                <div style="color:var(--muted);font-size:13px">Full optimization</div>
+              </div>
+              <div class="service">
+                <div>Portfolio website (GitHub Pages)</div>
+                <div class="price">$100</div>
+                <div style="color:var(--muted);font-size:13px">24-hour delivery</div>
+              </div>
+              <div class="service">
+                <div>Homework / Short tasks</div>
+                <div class="price">$10–$50</div>
+                <div style="color:var(--muted);font-size:13px">Per task — varies</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:14px">
+            <a class="btn" href="#contact">Hire Me</a>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3>How I work (quick)</h3>
+          <ol style="color:var(--muted);padding-left:18px">
+            <li>Message me with your requirement and deadline.</li>
+            <li>Pay via PayPal / UPI / Wise (I’ll provide details).</li>
+            <li>I deliver within the promised time and provide revisions.</li>
+          </ol>
+        </div>
+      </section>
+
+      <aside style="min-width:220px">
+        <div class="card">
+          <h3>Quick Contact</h3>
+          <p style="color:var(--muted);">Preferred: UPI / PayPal / Wise — put payment reference in message.</p>
+          <p style="margin-top:8px"><strong>Email:</strong> <span id="email">youremail@example.com</span></p>
+          <p><strong>WhatsApp:</strong> <span id="phone">+91-XXXXXXXXXX</span></p>
+          <div style="margin-top:12px">
+            <a class="btn" id="mailtoBtn" href="mailto:youremail@example.com?subject=Hire%20You">Email Me</a>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3>Samples</h3>
+          <div class="projects">
+            <div class="project">
+              <strong>Resume Sample</strong>
+              <p style="color:var(--muted);font-size:13px">ATS-ready resume I sent to recent client.</p>
+              <a class="btn" href="#" onclick="alert('Replace this link with your real sample or GitHub file URL')">View</a>
+            </div>
+            <div class="project">
+              <strong>Portfolio Demo</strong>
+              <p style="color:var(--muted);font-size:13px">A simple GitHub Pages portfolio.</p>
+              <a class="btn" href="#" onclick="alert('Replace this link with your live portfolio URL')">View</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <section id="projects" style="margin-top:20px">
+      <h2 class="card" style="padding:14px">Recent Work (demo)</h2>
+      <div class="projects" style="margin-top:10px">
+        <div class="project card">
+          <h4>Demo: GitHub Portfolio</h4>
+          <p style="color:var(--muted);font-size:13px">Small static site for students and juniors.</p>
+          <p><a class="btn" href="#" onclick="alert('Replace with project link')">Open</a></p>
+        </div>
+        <div class="project card">
+          <h4>Demo: Blog Post</h4>
+          <p style="color:var(--muted);font-size:13px">Short SEO-friendly article sample.</p>
+          <p><a class="btn" href="#" onclick="alert('Replace with project link')">Open</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:18px">
+      <div class="card">
+        <h2>Contact / Hire</h2>
+        <p style="color:var(--muted);">Fill in details and preferred payment method — I’ll reply fast.</p>
+        <form onsubmit="handleForm(event)">
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <input id="name" placeholder="Your name" style="flex:1;padding:10px;border-radius:8px;border:0;background:rgba(255,255,255,0.02);color:inherit" required>
+            <input id="emailInput" placeholder="Email or WhatsApp" style="flex:1;padding:10px;border-radius:8px;border:0;background:rgba(255,255,255,0.02);color:inherit" required>
+          </div>
+          <textarea id="message" placeholder="What do you need? (brief)" style="width:100%;margin-top:8px;padding:10px;border-radius:8px;border:0;background:rgba(255,255,255,0.02);color:inherit" rows="4" required></textarea>
+          <div style="margin-top:10px;display:flex;gap:8px">
+            <button class="btn" type="submit">Send Request</button>
+            <a class="btn" href="mailto:youremail@example.com?subject=I%20want%20to%20hire">Or email me</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>Built with ⚡ for quick freelance work • Replace content to personalize.</div>
+        <div style="color:var(--muted)">© <span id="year"></span> Your Name</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Small helpers to personalize the page quickly
+    const name = 'Your Name'; // change this
+    const initials = name.split(' ').map(n=>n[0]).slice(0,2).join('').toUpperCase();
+    document.getElementById('yourName').innerText = name;
+    document.getElementById('avatarText').innerText = initials;
+    document.getElementById('year').innerText = new Date().getFullYear();
+
+    function handleForm(e){
+      e.preventDefault();
+      const n = document.getElementById('name').value;
+      const em = document.getElementById('emailInput').value;
+      const msg = document.getElementById('message').value;
+      const body = encodeURIComponent(`Name: ${n}\nContact: ${em}\n\nMessage:\n${msg}`);
+      window.location.href = `mailto:youremail@example.com?subject=New%20hire%20request&body=${body}`;
+    }
+  </script>
+</body>
+</html>
